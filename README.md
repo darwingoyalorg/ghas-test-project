@@ -2,11 +2,19 @@
 
 This repository is designed to test GitHub Advanced Security features including Dependabot, Code Scanning, and Secret Scanning.
 
+## GitHub Advanced Security Dashboard
+
+Monitor security vulnerabilities and alerts:
+
+- 🔍 **[Dependabot Alerts](https://github.com/darwingoyalorg/ghas-test-project/security/dependabot)** - Dependency vulnerability scanning
+- 🛡️ **[Code Scanning Alerts](https://github.com/darwingoyalorg/ghas-test-project/security/code-scanning)** - Static code analysis and security issues
+- 🔐 **[Secret Scanning Alerts](https://github.com/darwingoyalorg/ghas-test-project/security/secret-scanning)** - Hardcoded secrets detection
+
 ## Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/ghas-test-project.git
+git clone https://github.com/darwingoyalorg/ghas-test-project.git
 
 # Set environment variables
 export DATABASE_URL="postgresql://admin:MySecretPassword123!@localhost:5432/testdb"
