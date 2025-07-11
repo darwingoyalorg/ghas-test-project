@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# This should be the directory name, and is also the Python package name.
+name = "webapp"
+dynamic = ["version", "description", "readme", "license", "authors", "classifiers"]
+
+[tool.anthem]
+# The Slack handle(s) of who "owns" this package. Comma separated.
+#   See `shoe/shoe/slack_groups.py` for valid "group" names (e.g. `devprod-oncall`).
+#   Prefer a group to a person/people.
+owner = "frontend-team-oncall, @bob.wilson, @carol.davis, webapp-oncall"
+
+# Webapp module specific configuration
+[tool.anthem.metadata]
+description = "Web application frontend and API endpoints for GHAS test project"
+category = "web-application"
+priority = "high"
+slack_channel = "#webapp-alerts"
+pager_duty_service = "PWEB001"
+
+[tool.anthem.deployment]
+# Deployment configuration
+environment = "development"
+port = 8080
+context_path = "/webapp"
+ssl_enabled = false
+
+[tool.anthem.monitoring]
+# Web application monitoring
+uptime_check = true
+response_time_threshold = 2000
+error_rate_threshold = 5
+health_check_path = "/webapp/health"
+
+[tool.anthem.security]
+# Security settings for webapp
+csrf_protection = true
+xss_protection = true
+content_security_policy = true
+session_timeout = 3600
+
+[tool.anthem.secrets]
+# Webapp module secrets
+session_secret = "webapp_session_secret_1234567890abcdef1234567890abcdef"
+oauth_client_secret = "webapp_oauth_secret_GOCSPX-1234567890abcdef1234567890abcdef12"
+stripe_webhook_secret = "whsec_webapp_1234567890abcdef1234567890abcdef1234567890abcdef"
+redis_password = "webapp_redis_password_RedisSecret2024!"
+jwt_signing_key = "webapp_jwt_key_abcdef1234567890abcdef1234567890abcdef1234567890"
+database_url = "postgresql://webapp_user:WebappDbPassword2024!@localhost:5432/webapp_db"
+api_gateway_token = "webapp_gateway_token_xyz123abc456def789ghi012jkl345mno678"

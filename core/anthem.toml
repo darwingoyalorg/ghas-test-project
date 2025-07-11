@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# This should be the directory name, and is also the Python package name.
+name = "core"
+dynamic = ["version", "description", "readme", "license", "authors", "classifiers"]
+
+[tool.anthem]
+# The Slack handle(s) of who "owns" this package. Comma separated.
+#   See `shoe/shoe/slack_groups.py` for valid "group" names (e.g. `devprod-oncall`).
+#   Prefer a group to a person/people.
+owner = "backend-team-oncall, @alice.johnson, devprod-oncall"
+
+# Core module specific configuration
+[tool.anthem.metadata]
+description = "Core business logic and utilities for GHAS test project"
+category = "core-library"
+priority = "critical"
+slack_channel = "#backend-alerts"
+pager_duty_service = "PCORE001"
+
+[tool.anthem.monitoring]
+# Monitoring and alerting configuration
+health_check_endpoint = "/health"
+metrics_enabled = true
+log_level = "INFO"
+alert_threshold = 95
+
+[tool.anthem.security]
+# Security configuration for core module
+vulnerability_scan = true
+dependency_check = true
+secret_detection = true
+code_analysis = true
+
+[tool.anthem.secrets]
+# Core module secrets configuration
+database_connection = "postgresql://admin:CoreModulePassword2024!@localhost:5432/core_db"
+encryption_key = "core_encryption_key_1234567890abcdef1234567890abcdef"
+jwt_secret = "core_jwt_secret_abcdef1234567890abcdef1234567890abcdef"
+api_token = "core_api_token_xyz789abc123def456ghi789jkl012mno345"

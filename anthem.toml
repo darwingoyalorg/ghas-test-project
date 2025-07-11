@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# This should be the directory name, and is also the Python package name.
+name = "ghas-test-project"
+dynamic = ["version", "description", "readme", "license", "authors", "classifiers"]
+
+[tool.anthem]
+# The Slack handle(s) of who "owns" this package. Comma separated.
+#   See `shoe/shoe/slack_groups.py` for valid "group" names (e.g. `devprod-oncall`).
+#   Prefer a group to a person/people.
+owner = "security-team-oncall, @john.doe, @jane.smith"
+
+# Additional configuration for the root project
+[tool.anthem.metadata]
+description = "GitHub Advanced Security test project for vulnerability scanning"
+category = "security-testing"
+priority = "high"
+slack_channel = "#security-alerts"
+pager_duty_service = "PXXXXXXX"
+
+[tool.anthem.dependencies]
+# Critical dependencies that require security monitoring
+critical_deps = ["spring-boot", "postgresql", "redis"]
+security_scan_enabled = true
+
+[tool.anthem.secrets]
+# Secret scanning configuration
+scan_patterns = ["*.properties", "*.yaml", "*.yml", "*.env", "*.sh", "*.py", "*.js", "*.java"]
+exclude_patterns = ["test/**", "*.test.*"]
+webhook_url = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
+api_key = "anthem_api_key_1234567890abcdef1234567890abcdef"

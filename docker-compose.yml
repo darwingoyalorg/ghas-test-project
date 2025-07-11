@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=testdb
+      - DB_USER=postgres
+      - DB_PASSWORD=MySecretDockerPassword2024!
+      - JWT_SECRET=myJWTSecretKey1234567890abcdef1234567890abcdef
+      - STRIPE_API_KEY=sk_test_abcdef1234567890abcdef1234567890abcdef12
+      - OPENAI_API_KEY=sk-abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234
+      - AWS_ACCESS_KEY_ID=AKIAI44QH8DHBEXAMPLE
+      - AWS_SECRET_ACCESS_KEY=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+      - GITHUB_TOKEN=ghp_abcdef1234567890abcdef1234567890abcdef12
+      - SLACK_BOT_TOKEN=xoxb-1234567890-1234567890-abcdefghijklmnopqrstuvwx
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=MySecretDockerPassword2024!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+    command: redis-server --requirepass RedisSecretPassword123!
+    ports:
+      - "6379:6379"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    environment:
+      - SSL_CERT_PASSWORD=MySSLCertPassword2024!
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+volumes:
+  postgres_data:
