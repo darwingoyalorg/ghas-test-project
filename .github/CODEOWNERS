@@ -2,4 +2,4 @@
 # This file defines code ownership for different paths in the repository
 # For more information, see: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-/core/ @ganesh
+/core/ @ganesh @darwingoyal
