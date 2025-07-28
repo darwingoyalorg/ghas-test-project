@@ -3,7 +3,7 @@
 # For more information, see: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 /core/ @ganesh @darwingoyal
-/src/ @chirag @ganesh
+/src @chirag @ganesh
 * @darwingoyal @priyansh007
 /webapp/*.java @ganesh
 /webapp/ @chirag @ganesh @priyansh007
