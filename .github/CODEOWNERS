@@ -2,12 +2,9 @@
 # This file defines code ownership for different paths in the repository
 # For more information, see: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-/core/ @ganesh @darwingoyal
 /src @chirag @ganesh
 * @darwingoyal @priyansh007
 /webapp/*.java @ganesh
 /webapp/ @chirag @ganesh @priyansh007
 /scripts/ @ganesh @priyansh
-/core/src @ganesh @priyansh
-/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src @ganesh
-/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src/core/src @ganesh132
+**/*otification* @ganesh124
