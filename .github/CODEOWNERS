@@ -4,8 +4,6 @@
 
 /src @chirag @ganesh
 * @darwingoyal @priyansh007
-/webapp/*.java @ganesh
-/webapp/ @chirag @ganesh @priyansh007
 /scripts/ @ganesh @priyansh
 **/*otification* @ganesh124
-**/*armorco*/runbook @lasttest
+**/*armorco*/runbook/ @lasttest
