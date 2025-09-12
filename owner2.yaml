@@ -1,0 +1,12 @@
+# -------------------- owner.yaml --------------------
+# Single-source-of-truth for this repository's ownership and escalation data.
+# Every field marked **Required** must be present in every repo.
+# mixed format key
+# -------------------- owner.yaml --------------------
+'service_name': content-delivery-network
+"team_name": 'cdn-infrastructure-team'
+team_email: "cdn-ops@darwin.com"
+'slack_channel': cdn-monitoring
+"domain": content-distribution
+jira_project: 'https://darwinda.atlassian.net/browse/CDN'
+'oncall': "https://app.incident.io/darwinsdf/on-call/schedules/01J3D6ZFHN9FPD06V219VG"
