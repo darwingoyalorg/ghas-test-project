@@ -1,11 +1,12 @@
 # -------------------- owner.yaml --------------------
 # Single-source-of-truth for this repository's ownership and escalation data.
 # Every field marked **Required** must be present in every repo.
+# mixed format key
 # -------------------- owner.yaml --------------------
-service_name: "travel-operations"                           # **Required** - name of this service
-team_name: "fulfillment-and-automation-team"      # **Required** - canonical team slug, use "multi-owner" if several teams manage distinct components below.
-team_email: "flights@darwin.com"          # **Required** - team's email DL
-slack_channel: "#flights"                      # **Required** - primary Slack channel to page for questions / incidents.
-domain: "travel2updated"                                      # **Required** - Business unit for this service
-jira_project: "https://darwinda.atlassian.net/browse/PROV" # **Required** - Jira project name
-oncall: "https://app.incident.io/darwinsdf/on-call/schedules/01J2A3HDGJ6CNA03S986SD" # Optional - Incident.io alias.
+'service_name': content-delivery-network
+"team_name": 'cdn-infrastructure-team'
+team_email: "cdn-ops@darwin.com"
+'slack_channel': cdn-monitoring
+"domain": content-distribution
+jira_project: 'https://darwinda.atlassian.net/browse/CDN'
+'oncall': "https://app.incident.io/darwinsdf/on-call/schedules/01J3D6ZFHN9FPD06V219VG"
