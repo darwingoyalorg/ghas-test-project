@@ -1,0 +1,42 @@
+name: Verademo
+brief_description: Test Application for SAST by Veracode
+full_description: Test Application for SAST by Veracode
+type: APP
+status: OBSOLETE
+team_number: 305
+system_id: 305
+group_name: 305
+domain: SAST
+owners:
+  - name: Ramakanth
+    email: ramakanth.kanchi@tesco.com
+    title: Security Engineer
+contact_team:
+  teams_channel_link: TEAMS_NA
+  team_email: ramakanth.kanchi@tesco.com
+  zendesk_queue_name: ZENDESK_NA
+  jira_board_link: JIRA_NA
+  primary_contact_method: EMAIL
+dependencies:
+  depends_on:
+    - api_domain: none
+      team_number: none
+    - api_domain: none2
+      team_number: none2
+dashboards:
+  - description: Dashboard description - Test Application for SAST by Veracode
+    link: Dashboard_link_NA
+  - description: Dashboard description - Test Application for SAST by Veracode2
+    link: Dashboard_link_NA2
+documentation:
+  - description: Documentation description - Test Application for SAST by Veracode
+    link: Documentation_link_NA
+  - description: Documentation description - Test Application for SAST by Veracode2
+    link: Documentation_link_NA2
+role_tag_ids:
+  - 305_tag
+  - 305_tag1
+  - 305_tag2
+openapi_location:
+  prod: no-link-prod
+  ppe: no-link-ppe
